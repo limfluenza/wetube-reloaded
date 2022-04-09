@@ -17,11 +17,13 @@
   "homepage": "https://github.com/limfluenza/wetube-reloaded#readme",
   "dependencies": {
     "@babel/preset-env": "^7.16.11",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/node": "^7.16.8",
     "nodemon": "^2.0.15"
-  }
+  },
+  "main": "index.js"
 }

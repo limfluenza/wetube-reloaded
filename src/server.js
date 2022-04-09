@@ -1,8 +1,9 @@
 import express from "express";
+import morgan from "morgan";
 const PORT = 4000;
 
 const app = express();
-
+const logger = morgan("dev");
 const gossipMiddleware = (req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
@@ -23,8 +24,7 @@ const handleProtected = (req, res) => {
   return res.send("Welcome to the private lounge.");
 };
 
-app.use(gossipMiddleware);
-app.use(privateMiddleware);
+app.use(logger);
 app.get("/", handleHome);
 app.get("/protected", handleProtected);
 
